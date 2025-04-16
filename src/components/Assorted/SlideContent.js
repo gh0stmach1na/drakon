@@ -7,6 +7,7 @@ export const SlideContent = ({ topics }) => {
     setSlideIndex(0)
   }, [])
 
+  // TODO: pascal case name for Sectional
   const renderSlideContent = () => {
     return <div className="flex column align-center">
       <h1>{topics[slideIndex].title}</h1>
@@ -22,6 +23,7 @@ export const SlideContent = ({ topics }) => {
 
   const renderSlideNav = () => {
     return Object.keys(topics).map((key, idx) => {
+      // TODO: verify need for both
       const iconClass = idx === slideIndex || key === slideIndex
         ? "fa-solid fa-circle" 
         : "fa-regular fa-circle"

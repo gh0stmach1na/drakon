@@ -18,7 +18,6 @@ export const HomepageAbout = forwardRef((_, ref) => {
 
   return (
     <section className="HomepageAbout flex column align-center" ref={ref}>
-
       <div className="about section-container flex column align-center">
         <h1>{about.title}</h1>
         <div className="flex row justify-center">

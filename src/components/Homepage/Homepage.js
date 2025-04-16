@@ -35,7 +35,7 @@ export const Homepage = () => {
       className={`Homepage --container --background`} 
       ref={scrollToTopRef}>
 
-      <header className="sticky flex row justify-between">
+      <header className="sticky flex row justify-between align-center">
         <div className="left-column">
           <Image imgSrc={headerLogo} position="left" width="300px" />
         </div>

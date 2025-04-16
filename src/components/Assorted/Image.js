@@ -1,6 +1,7 @@
 import LazyLoad from 'react-lazy-load';
 
 export const Image = ({ imgSrc, position, size, width }) => {
+  // TODO: test various 
   const sizeConfig = {
     sm: {
       width: '100px',
@@ -8,14 +9,14 @@ export const Image = ({ imgSrc, position, size, width }) => {
     },
     m: {
       width: '100px',
-      heigt: '100px'
+      height: '100px'
     },
     l: {
       width: '300px',
       height: '300px',
     },
   }
-
+  // TODO: does lazyload work better with bg image or <img> ?
   return (
     <LazyLoad>
       <div 
