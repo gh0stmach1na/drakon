@@ -1,17 +1,4 @@
-# PeaceofMindSpine.com ( React.js )
-
-Built for an out of office spine specialist and for the clients who need a second-opinion spine analysis.
-
-My business partner took care of the deployment, designs and being the point of contact. I brainstormed and offered ideas, then researched and developed the web's fullstack, both backend and frontend frameworks, moving across data management, security features and user interface.
-
-Written in Typescript Node as a backend with lightweight SQLite database and Knex query builder. React for the UX. The rest are dependencies as documented on the README.
-
-The application is currently going through a few additional features- such as secret management with Docker container, and adding a certificate for the secure protocol and third-party OAuth integration.
-
-## Requirements
-  
-  This repository is the frontend portion.
-  For backend, please clone and see more details on [myspine-node](https://github.com/DreamTechSyndicate/myspine-node)
+# DrakonCG.com ( React.js )
 
 ## Scripts
 
@@ -49,4 +36,3 @@ For development and production stages
 3. **sass**, **sass-loader**, **style-loader**, **css-loader** : Sassy CSS (Cascade Style Sheet) along with its loading-processing css in JavaScript
 4. **react-router** & **react-router-dom** : On-demand client-side URL routing for faster and more dynamic user experiences
 5. **react-lazy-load** : Predictable way to defer content loading once visible in the viewport
-6. **react-filepond** : Flexible file upload
