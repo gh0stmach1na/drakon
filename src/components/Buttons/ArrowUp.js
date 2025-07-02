@@ -6,7 +6,7 @@ export const ArrowUp = () => {
 
   return (
     <svg
-      className="ArrowUp --button"
+      className="ArrowUp button"
       xmlns="http://www.w3.org/2000/svg" 
       xmlnsXlink="http://www.w3.org/1999/xlink" 
       version="1.1" 

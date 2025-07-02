@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 export const Tooltip = ({ children, text, position, right }) => {
   const [isVisible, setIsVisible] = useState(false)
 
   return (
     <section className="Tooltip">
-
       {isVisible && (
-        <span className={`--tooltip-content ${position
+        <span className={`tooltip-content ${position
           ? position 
           : ''}`}
           style={{ 'right': right }}>

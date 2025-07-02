@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const HomepageNav = forwardRef((_, refs) => {
   const {  
-    scrollToTopRef,
+    homeRef,
     aboutRef,
     servicesRef,
     faqRef,
@@ -22,7 +22,7 @@ export const HomepageNav = forwardRef((_, refs) => {
 
   const navOptions = {
     home: {
-      onClick: () => scrollToSection(scrollToTopRef),
+      onClick: () => scrollToSection(homeRef),
       linkTo: '',
       title: 'HOME'
     },
@@ -50,7 +50,7 @@ export const HomepageNav = forwardRef((_, refs) => {
 
   return (
     <section className="HomepageNav">
-      <div className="--nav-options">
+      <div className="nav-options">
         {
           Object.keys(navOptions).map((op, idx) => {
             const title = navOptions[op].title
@@ -59,7 +59,7 @@ export const HomepageNav = forwardRef((_, refs) => {
               <Link
                 to={`${navOptions[op]?.linkTo}`}
                 onClick={navOptions[op].onClick}>
-                <h4 className={`--nav-option --button ${op}`}>
+                <h4 className={`nav-option --button ${op}`}>
                   {title}
                 </h4>
               </Link>

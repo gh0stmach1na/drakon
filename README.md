@@ -1,17 +1,12 @@
 # DrakonCG.com ( React.js )
-
 ## Scripts
-
 ### - Initial Configuration
-
   Run scripts `yarn && yarn dev`
 
 ### - Start Local Application
-
   Run scripts `yarn dev`
 
 ### - Development Phase
-
   #### Run `yarn build` when
   - Changes or see changes in tsconfig.json / webpack.config.js
   - Deploy to a production enviro

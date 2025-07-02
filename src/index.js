@@ -5,23 +5,15 @@ import reportWebVitals from './reportWebVitals';
 import './scss/index.scss'
 import './scss/imports.scss'
 import { BrowserRouter } from 'react-router-dom'
-import { 
-  AuthProvider, 
-  NotificationProvider, 
-  CustomerProvider 
-} from './contexts'
+import { NotificationProvider } from './contexts'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <NotificationProvider>
-          <CustomerProvider>
-            <App />
-          </CustomerProvider>
-        </NotificationProvider>
-      </AuthProvider>
+      <NotificationProvider>
+          <App />
+      </NotificationProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

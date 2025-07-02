@@ -6,7 +6,7 @@
   padding: 23px 0 20px 0;
   text-align: center;
 
-  .--nav-options {
+  .nav-options {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -15,13 +15,9 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    .--nav-option,
-    .--nav-info {
+    .nav-option {
       color: #FFF;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, .8)
-    }
-
-    .--nav-option {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, .8);
       padding: 0 15px;
       margin: 0;
       font-weight: 700;
@@ -32,21 +28,12 @@
       }
     }
   }
-
-  .--nav-info {
-    text-align: center;
-    padding-right: 15px;
-  }
 }
 
 @media screen and (max-width: 988px) {
   .HomepageNav { 
-    .--nav-option {
+    .nav-option {
       justify-content: center;
-    }
-
-    .--nav-info {
-      width: 89%;
     }
   }
 }
@@ -56,12 +43,8 @@
     padding-left: 10px;
     min-width: 300px;
 
-    .--nav-options {
+    .nav-options {
       max-width: 340px;
-    }
-    
-    .--nav-info {
-      font-size: 12px;
     }
   }
 }

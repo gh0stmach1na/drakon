@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react'
+import { useRef } from 'react'
 import {
   HomepageNav,
   HomepageServices,
@@ -7,7 +7,6 @@ import {
   HomepageContact,
 } from '.'
 import { SideNavigation } from '../Buttons'
-import { CustomerContext } from '../../contexts'
 import { intro } from '../../copies/drakon-home';
 import { Image } from '../Assorted';
 
@@ -15,15 +14,15 @@ import headerLogo from '../../img/logo/dcg_toplogo_v2.png'
 import mainLogo from '../../img/logo/drakon-logo-full-color-rgb-300px72ppi.png'
 
 export const Homepage = () => {
-  const { scrollToTopRef } = useContext(CustomerContext)
   
+  const homeRef = useRef()
   const aboutRef = useRef()
   const servicesRef = useRef()
   const faqRef = useRef()
   const contactRef = useRef()
 
   const refs = {
-    scrollToTopRef,
+    homeRef,
     aboutRef,
     servicesRef,
     faqRef,
@@ -32,8 +31,8 @@ export const Homepage = () => {
 
   return (
     <section 
-      className={`Homepage --container --background`} 
-      ref={scrollToTopRef}>
+      className={`Homepage container background`} 
+      ref={homeRef}>
 
       <header className="sticky flex row justify-between align-center">
         <div className="left-column">
@@ -49,8 +48,8 @@ export const Homepage = () => {
         <Image size="l" imgSrc={mainLogo} />
       </div>
       
-      <SideNavigation ref={scrollToTopRef} />
-      <div className="--content-container">
+      <SideNavigation ref={homeRef} />
+      <div className="content-container">
         <HomepageAbout ref={aboutRef} />
         <HomepageServices ref={servicesRef} />
         <HomepageFAQ ref={faqRef} />

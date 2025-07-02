@@ -3,7 +3,7 @@
   bottom: 0%;
   height: 288px;
 
-  .--container {
+  .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,12 +14,12 @@
     position: absolute;
     bottom: -11px;
 
-    .--column-left,
-    .--column-right {
+    .column-left,
+    .column-right {
       width: 20%;
     }
 
-    .--column-left {
+    .column-left {
       padding-left: 20px;
     }
 
@@ -28,7 +28,7 @@
       font-weight: 700;
     }
     
-    .--column-center {
+    .column-center {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -42,7 +42,7 @@
       }
     }
 
-    .--column-right {
+    .column-right {
       padding-right: 20px;
       text-align: right;
     }
@@ -51,27 +51,27 @@
 
 @media screen and (max-width: 645px) {
   .HomepageContact {
-    .--container {
+    .container {
       flex-direction: column;
       justify-content: center;
       height: 340px;
 
-      .--column-left {
+      .column-left {
         text-align: center;
         padding-left: 0px;
       }
 
-      .--column-center {
+      .column-center {
         padding: 20px 0;
       }
   
-      .--column-right {
+      .column-right {
         padding-right: 0px;
         text-align: center;
       }
 
-      .--column-left,
-      .--column-right {
+      .column-left,
+      .column-right {
         width: 100%;
       }
     }
