@@ -3,6 +3,7 @@ import { Image } from '../Assorted'
 import { about, RAASstats } from '../../copies/drakon-home'
 import keyLogo from '../../img/logo/keystodrakon.png'
 
+// TODO: could be more generic
 export const HomepageAbout = forwardRef((_, ref) => {
   const renderStats = () => {
     return RAASstats.stats.map(stat => {

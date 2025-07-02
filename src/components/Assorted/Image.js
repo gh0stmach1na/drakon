@@ -1,7 +1,7 @@
 import LazyLoad from 'react-lazy-load';
 
 export const Image = ({ imgSrc, position, size, width }) => {
-  // TODO: test various 
+  // TODO: test variations
   const sizeConfig = {
     sm: {
       width: '100px',

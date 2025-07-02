@@ -1,33 +1,39 @@
-# DrakonCG.com ( React.js )
+# DrakonCG.com
+ - speed-built SPA (Single Page Application) 
+ - designed for reusability and proof of concept - a more manageable, customizable, scalable and alternative to a traditional blog
+
 ## Scripts
 ### - Initial Configuration
-  Run scripts `yarn && yarn dev`
+  run scripts `yarn && yarn dev`
 
 ### - Start Local Application
-  Run scripts `yarn dev`
+  run scripts `yarn dev`
 
 ### - Development Phase
   #### Run `yarn build` when
-  - Changes or see changes in tsconfig.json / webpack.config.js
-  - Deploy to a production enviro
+  - see changes in tsconfig.json / webpack.config.js
+  - deploy to a production enviro
 
   #### Run `yarn` when
-  - Changes or see changes in Package.json
+  - see changes in Package.json
 
   #### Run `yarn audit` and|or `yarn outdated` when
-  - Whenever you want to check dependency vulnerabilities && integrity respectively
+  - we want to check dependency vulnerabilities && integrity respectively
 
-  #### Run `yarn cache clean` when 
-  - Whenever you want to clear local packages cache
+  #### Run `yarn cache clean` whenever 
+  - we want to clear local packages cache
 
 ## Frameworks
-1. **React.js** : Flexible and performant web API framework
+1. **React.js** : flexible and performant web API framework
 
-## Dependencies
-For development and production stages
-
-1. **axios** : Promised-based API requests in Node.js and the browser
-2. **dotenv** : Environment loading module
+## Development/ Production Dependencies
+1. **axios** : promised-based API requests in Node.js and the browser
+2. **dotenv** : environment loading module
 3. **sass**, **sass-loader**, **style-loader**, **css-loader** : Sassy CSS (Cascade Style Sheet) along with its loading-processing css in JavaScript
-4. **react-router** & **react-router-dom** : On-demand client-side URL routing for faster and more dynamic user experiences
-5. **react-lazy-load** : Predictable way to defer content loading once visible in the viewport
+4. **react-router** & **react-router-dom** : on-demand client-side URL routing for faster and more dynamic user experiences
+5. **react-lazy-load** : predictable way to defer content loading once visible in the viewport
+
+## Possible Areas of Improvement
+  - resolve `TODO:` annotations
+  - implement Typescript, unit and integration tests early
+  - improve responsiveness especially navbar collapse and module widths on resize

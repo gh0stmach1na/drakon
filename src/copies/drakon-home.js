@@ -3,6 +3,7 @@ import raasImg2 from '../img/logo/cyber-security-system-network-and-devices-2301
 import raasImg3 from '../img/logo/cyber-security-threats-or-attacks-shield-22988.png'
 import raasImg4 from '../img/logo/cyber-security-hacked-laptop-alert-23028.png'
 
+// TODO: not necessary at this phase but could be potentially stored and queried via API
 export const intro = "Infosec Compliance At Your Doorstep"
 
 export const about = {
