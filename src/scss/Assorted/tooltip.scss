@@ -10,17 +10,5 @@
     text-align: center;
     height: 100vh;
     padding: 2px 5px;
-
-    &.top {
-      bottom: 100%;
-      transform: translateX(-50%) translateY(-100%);
-      white-space: no-wrap
-    }
-
-    &.right {
-      right: 0px;
-      left: auto;
-      transform: translateX(100%);
-    }
   }
 }

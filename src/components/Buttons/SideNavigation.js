@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export const SideNavigation = forwardRef((_, ref) => {
   return (
-    <Tooltip text="Back to Top" right="13px">
+    <Tooltip text="Back to Top" right="20px">
       <section className="SideNavigation container">
         <Link to="#"
           onClick={() => ref.current.scrollIntoView({ behavior: 'smooth' })}>

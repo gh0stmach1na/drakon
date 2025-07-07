@@ -31,7 +31,7 @@ export const Homepage = () => {
 
   return (
     <section 
-      className={`Homepage container background`} 
+      className={`Homepage background`} 
       ref={homeRef}>
 
       <header className="sticky flex row justify-between align-center">

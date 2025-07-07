@@ -5,15 +5,12 @@ import reportWebVitals from './reportWebVitals';
 import './scss/index.scss'
 import './scss/imports.scss'
 import { BrowserRouter } from 'react-router-dom'
-import { NotificationProvider } from './contexts'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <NotificationProvider>
-          <App />
-      </NotificationProvider>
+        <App />
     </BrowserRouter>
   </React.StrictMode>
 );
