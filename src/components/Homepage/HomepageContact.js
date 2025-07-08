@@ -15,7 +15,7 @@ export const HomepageContact = forwardRef((_, ref) => {
           </div>
 
           <div className="column-center">
-            <Image imgSrc={drakonLogo} size="m" />
+            <Image imgSrc={drakonLogo} size="m" marginRight="0px" />
             <h1><em>{currentYear}</em></h1>
           </div>
 

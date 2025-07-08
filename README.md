@@ -36,4 +36,3 @@
 ## Possible Areas of Improvement
   - resolve `TODO:` annotations
   - implement Typescript, unit and integration tests early
-  - improve responsiveness especially navbar collapse and module widths on resize

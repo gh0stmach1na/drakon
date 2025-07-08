@@ -22,7 +22,7 @@ export const HomepageAbout = forwardRef((_, ref) => {
       <div className="about section-container flex column align-center">
         <h1>{about.title}</h1>
         <div className="flex row justify-center flex-column-mobile">
-          <Image size="m" imgSrc={keyLogo} />
+          <Image size="sm" imgSrc={keyLogo} />
           <p>{about.content}</p>
         </div>
         <span>-{about.credit}</span>
