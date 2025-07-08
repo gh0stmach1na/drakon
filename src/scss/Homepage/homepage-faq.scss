@@ -13,4 +13,45 @@
     margin-right: 20px;
     width: 50%;
   }
+  
+  &.faq-responsive {
+    .mobile-header {
+      display: none;
+    }
+    
+    .desktop-header {
+      display: block;
+      margin-top: 10px;
+    }
+    
+    @media screen and (max-width: 520px) {
+      flex-direction: column !important;
+      align-items: center;
+      
+      .left-column {
+        width: 100% !important;
+        height: fit-content;
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+        flex: none;
+      }
+      
+      .right-column {
+        width: 100% !important;
+        text-align: center;
+        flex: none;
+        text-align: unset;
+      }
+      
+      .mobile-header {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .desktop-header {
+        display: none;
+      }
+    }
+  }
 }

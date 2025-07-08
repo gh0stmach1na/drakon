@@ -20,12 +20,13 @@ export const HomepageFAQ = forwardRef((_, ref) => {
   }
 
   return (
-    <section className="HomepageFAQ section-container flex row justify-center" ref={ref}>
+    <section className="HomepageFAQ section-container flex row justify-center faq-responsive" ref={ref}>
       <div className="left-column">
+        <h1 className="mobile-header">{services.contentHeader}</h1>
         {renderServicesList()}
       </div>
       <div className="right-column">
-        <h1>{services.contentHeader}</h1>
+        <h1 className="desktop-header">{services.contentHeader}</h1>
         <p>{services.contentSubHeader}</p>
         {renderServicesContent()}
       </div>
