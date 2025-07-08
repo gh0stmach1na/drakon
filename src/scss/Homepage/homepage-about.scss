@@ -4,9 +4,40 @@
   }
 
   .RAASstats-container {
+    padding: 40px;
     background-color: #141414;
     width: calc(100% - 90px);
-    text-align: center;
+  }
+
+  .stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+    .Stat {
+      flex: 1 1 200px;
+      max-width: 250px;
+      margin-right: 0;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .Stat {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+      
+      .Stat {
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .flex-column-mobile {

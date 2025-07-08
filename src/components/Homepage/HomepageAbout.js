@@ -28,9 +28,9 @@ export const HomepageAbout = forwardRef((_, ref) => {
         <span>-{about.credit}</span>
       </div>
 
-      <div className="RAASstats-container section-container">
+      <div className="RAASstats-container">
         <h2>{RAASstats.title}</h2>
-        <div className="flex row justify-center wrap">
+        <div className="flex row justify-center wrap stats-grid">
           {renderStats()}
         </div>
       </div>
