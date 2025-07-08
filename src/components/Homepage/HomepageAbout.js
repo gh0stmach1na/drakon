@@ -1,39 +1,23 @@
 import React, { forwardRef } from 'react'
 import { Image } from '../Assorted'
 import { about, RAASstats } from '../../copies/drakon-home'
+import { Stats } from '../Stats'
 import keyLogo from '../../img/logo/keystodrakon.png'
 
-// TODO: could be more generic
 export const HomepageAbout = forwardRef((_, ref) => {
-  const renderStats = () => {
-    return RAASstats.stats.map(stat => {
-      return <div className="Stat flex row justify-center align-center">
-        <Image imgSrc={stat.imgSrc} width="100px" />
-        <div className="flex column align-start">
-          <h1>{stat.counter}</h1>
-          <span>{stat.label}</span>
-        </div>
-      </div>
-    })
-  }
-
   return (
     <section className="HomepageAbout flex column align-center" ref={ref}>
+      
       <div className="about section-container flex column align-center">
         <h1>{about.title}</h1>
         <div className="flex row justify-center flex-column-mobile">
           <Image imgSrc={keyLogo} width="120px" />
           <p>{about.content}</p>
         </div>
-        <span>-{about.credit}</span>
+        <span>-{about.footer}</span>
       </div>
 
-      <div className="RAASstats-container">
-        <h2>{RAASstats.title}</h2>
-        <div className="flex row justify-center wrap stats-grid">
-          {renderStats()}
-        </div>
-      </div>
+      <Stats stats={RAASstats} />
     </section>
   )
 })

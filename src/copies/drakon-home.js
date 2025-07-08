@@ -3,13 +3,13 @@ import raasImg2 from '../img/logo/cyber-security-system-network-and-devices-2301
 import raasImg3 from '../img/logo/cyber-security-threats-or-attacks-shield-22988.png'
 import raasImg4 from '../img/logo/cyber-security-hacked-laptop-alert-23028.png'
 
-// TODO: not necessary at this phase but could be potentially stored and queried via API
+// TODO: potential API storage/query (not necessary at this phase)
 export const intro = "Infosec Compliance At Your Doorstep"
 
 export const about = {
   title: "About DRAKON",
   content: "At Drakon Consulting, we're your compass in the maze of data privacy compliance. With a blen of hands-on expertise and cutting-edge tools, we conduct thorough audits to map out your data ecosystem--its locations, movements, and th regulatory tapestry that surrounds it. These audits aren't just about checking boxes, they're about clarity. We uncover vulnerabilities, pinpointing the gaps in your data defenses. Armed with this insight, we craft tailored remediation plans, ensuring your organization sails smoothly through the turbulent seas of comliance. Say goodbye to uncertainty and embrace assurance with Drakon Consulting--where every audit is a step toward fortifying your data fortress.",
-  credit: "J. Bolton - CEO"
+  footer: "J. Bolton - CEO"
 }
 
 export const RAASstats = {
