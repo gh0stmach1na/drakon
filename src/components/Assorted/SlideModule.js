@@ -22,15 +22,13 @@ export const SlideModule = ({ topics }) => {
 
   const renderSlideNav = () => {
     return Object.keys(topics).map((key, idx) => {
-      // TODO: verify need for both
-      console.log('key:', key, 'index:', idx, 'slideIndex:', slideIndex)
-      const iconClass = idx === slideIndex || key === slideIndex
+      const iconClass = idx === slideIndex
         ? "fa-solid fa-circle" 
         : "fa-regular fa-circle"
           
       return <i 
         className={iconClass} 
-        onClick={() => setSlideIndex(key)} 
+        onClick={() => setSlideIndex(Number(key))} 
       />
     })
   }
