@@ -8,7 +8,7 @@ export const HomepageAbout = forwardRef((_, ref) => {
   const renderStats = () => {
     return RAASstats.stats.map(stat => {
       return <div className="Stat flex row justify-center align-center">
-        <Image size="sm" imgSrc={stat.imgSrc}/>
+        <Image imgSrc={stat.imgSrc} width="100px" />
         <div className="flex column align-start">
           <h1>{stat.counter}</h1>
           <span>{stat.label}</span>
@@ -22,7 +22,7 @@ export const HomepageAbout = forwardRef((_, ref) => {
       <div className="about section-container flex column align-center">
         <h1>{about.title}</h1>
         <div className="flex row justify-center flex-column-mobile">
-          <Image size="sm" imgSrc={keyLogo} />
+          <Image imgSrc={keyLogo} width="120px" />
           <p>{about.content}</p>
         </div>
         <span>-{about.credit}</span>

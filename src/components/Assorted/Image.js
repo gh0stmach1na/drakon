@@ -1,7 +1,6 @@
 import LazyLoad from 'react-lazy-load';
 
-export const Image = ({ imgSrc, position, size, width, marginRight }) => {
-  // TODO: test variations
+export const Image = ({ imgSrc, position = 'center', size, width, marginRight, alt = '' }) => {
   const sizeConfig = {
     sm: {
       width: '100px',
@@ -16,22 +15,25 @@ export const Image = ({ imgSrc, position, size, width, marginRight }) => {
       height: '250px',
     },
   }
-  // TODO: does lazyload work better with bg image or <img> ?
+
+  const style = {
+    width: width || (sizeConfig[size] && sizeConfig[size].width),
+    height: sizeConfig[size] && sizeConfig[size].height,
+    objectFit: 'contain',
+    objectPosition: position,
+    display: 'block',
+    marginRight: marginRight ? marginRight : '10px',
+    textAlign: 'center',
+  }
+
   return (
     <LazyLoad>
-      <div 
-        style={{
-          width: `${width}`,
-          ...sizeConfig[size],
-          textAlign: 'center',
-          marginRight: `${marginRight ? marginRight : '10px'}`,
-          backgroundImage: `url(${imgSrc})`,
-          backgroundSize: 'contain',
-          backgroundPosition: `${position ? position : 'center'}`,
-          backgroundRepeat: 'no-repeat',
-          minHeight: '100px'
-        }}>
-      </div>
+      <img 
+        src={imgSrc} 
+        alt={alt}
+        style={style}
+        loading="lazy"
+      />
     </LazyLoad>
   )
 }
