@@ -21,7 +21,7 @@ export const HomepageAbout = forwardRef((_, ref) => {
     <section className="HomepageAbout flex column align-center" ref={ref}>
       <div className="about section-container flex column align-center">
         <h1>{about.title}</h1>
-        <div className="flex row justify-center">
+        <div className="flex row justify-center flex-column-mobile">
           <Image size="m" imgSrc={keyLogo} />
           <p>{about.content}</p>
         </div>
