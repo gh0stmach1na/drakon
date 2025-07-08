@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export const HomepageNav = forwardRef((_, refs) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
   const {  
     homeRef,
     aboutRef,
@@ -18,6 +20,15 @@ export const HomepageNav = forwardRef((_, refs) => {
       const top = currentRef.current.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: top - 50, ...scrollConfig })
     }
+  }
+
+  const handleNavClick = (onClick) => {
+    onClick()
+    setIsMenuOpen(false) // Close menu after clicking a nav item
+  }
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
   }
 
   const navOptions = {
@@ -51,21 +62,33 @@ export const HomepageNav = forwardRef((_, refs) => {
   return (
     <section className="HomepageNav">
       <div className="nav-options">
-        {
-          Object.keys(navOptions).map((op, idx) => {
-            const title = navOptions[op].title
+        {/* Hamburger Menu Button */}
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
 
-            return <React.Fragment key={idx}>
-              <Link
-                to={`${navOptions[op]?.linkTo}`}
-                onClick={navOptions[op].onClick}>
-                <h4 className={`nav-option --button ${op}`}>
-                  {title}
-                </h4>
-              </Link>
-            </React.Fragment>
-          })
-        }
+        {/* Navigation Links */}
+        <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+          {
+            Object.keys(navOptions).map((op, idx) => {
+              const title = navOptions[op].title
+
+              return <React.Fragment key={idx}>
+                <Link
+                  to={`${navOptions[op]?.linkTo}`}
+                  onClick={() => handleNavClick(navOptions[op].onClick)}>
+                  <h4 className={`nav-option --button ${op}`}>
+                    {title}
+                  </h4>
+                </Link>
+              </React.Fragment>
+            })
+          }
+        </div>
       </div>
     </section>
   )
